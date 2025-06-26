@@ -84,6 +84,7 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 		alwaysAllowWriteProtected,
 		alwaysAllowExecute,
 		alwaysAllowMcp,
+		alwaysAllowProceedWhileRunning,
 		allowedCommands,
 		writeDelayMs,
 		mode,
@@ -888,6 +889,10 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 				return alwaysAllowExecute && isAllowedCommand(message)
 			}
 
+			if (message.ask === "command_output") {
+				return alwaysAllowProceedWhileRunning
+			}
+
 			// For read/write operations, check if it's outside workspace and if
 			// we have permission for that.
 			if (message.ask === "tool") {
@@ -955,6 +960,7 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 			isMcpToolAlwaysAllowed,
 			alwaysAllowModeSwitch,
 			alwaysAllowSubtasks,
+			alwaysAllowProceedWhileRunning,
 		],
 	)
 

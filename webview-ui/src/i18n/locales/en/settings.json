@@ -118,6 +118,10 @@
 			"commandPlaceholder": "Enter command prefix (e.g., 'git ')",
 			"addButton": "Add"
 		},
+		"proceedWhileRunning": {
+			"label": "Proceed While Running",
+			"description": "Automatically proceed when commands are running without requiring manual approval"
+		},
 		"apiRequestLimit": {
 			"title": "Max Requests",
 			"description": "Automatically make this many API requests before asking for approval to continue with the task.",

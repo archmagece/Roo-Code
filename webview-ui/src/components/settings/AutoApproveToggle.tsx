@@ -14,6 +14,7 @@ type AutoApproveToggles = Pick<
 	| "alwaysAllowModeSwitch"
 	| "alwaysAllowSubtasks"
 	| "alwaysAllowExecute"
+	| "alwaysAllowProceedWhileRunning"
 >
 
 export type AutoApproveSetting = keyof AutoApproveToggles
@@ -82,6 +83,13 @@ export const autoApproveSettingsConfig: Record<AutoApproveSetting, AutoApproveCo
 		descriptionKey: "settings:autoApprove.execute.description",
 		icon: "terminal",
 		testId: "always-allow-execute-toggle",
+	},
+	alwaysAllowProceedWhileRunning: {
+		key: "alwaysAllowProceedWhileRunning",
+		labelKey: "settings:autoApprove.proceedWhileRunning.label",
+		descriptionKey: "settings:autoApprove.proceedWhileRunning.description",
+		icon: "play",
+		testId: "always-allow-proceed-while-running-toggle",
 	},
 }
 
