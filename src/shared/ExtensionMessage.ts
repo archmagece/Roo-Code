@@ -172,6 +172,7 @@ export type ExtensionState = Pick<
 	| "alwaysAllowModeSwitch"
 	| "alwaysAllowSubtasks"
 	| "alwaysAllowExecute"
+	| "alwaysAllowProceedWhileRunning"
 	| "allowedCommands"
 	| "allowedMaxRequests"
 	| "browserToolEnabled"
